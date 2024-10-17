@@ -2,7 +2,16 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <div>Nav</div>
+   <>
+   <nav>
+    <h1>
+    <img src={''} alt="" />
+    </h1>
+    <ul>
+        
+    </ul>
+   </nav>
+   </>
   )
 }
 
