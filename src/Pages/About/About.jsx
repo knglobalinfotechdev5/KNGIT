@@ -2,7 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "../../Components/ui/lamp";
-import { Aboutus } from "../../Constant";
+import { Aboutus, Whychoose } from "../../Constant";
+import { Star } from "../../Assets/data";
 
 export function About() {
   return (
@@ -31,27 +32,95 @@ export function About() {
                 duration: 0.5,
                 ease: "easeInOut",
               }}
-              className="my-2" // Added margin for spacing
+              className="my-2 flex flex-col gap-8" // Added margin for spacing
             >
-              {data.text}
+              <div className="leading-7">{data.text1}</div>
+              <div className="leading-7">{data.text2}</div>
             </motion.p>
           ))}
         </div>
       </div>
       <div className="bg-slate-950">
-  <motion.div
-    initial={{ opacity: 0, y: 50 }} // Start off-screen and transparent
-    whileInView={{ opacity: 1, y: 0 }} // Fade in and slide up
-    transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5,}} // Animation duration and easing
-    viewport={{ once: true }} // Animation will happen once when it comes into view
-    className="text-center py-4"
-  >
-    <p className="text-white text-xl sm:text-2xl md:text-3xl"> {/* Responsive text size */}
-      Why Choose Us
-    </p>
-  </motion.div>
-</div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }} // Start off-screen and transparent
+          whileInView={{ opacity: 1, y: 0 }} // Fade in and slide up
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5, }} // Animation duration and easing
+          viewport={{ once: true }} // Animation will happen once when it comes into view
+          className="text-center py-4"
+        >
+          <p className="text-white text-xl mt-[20%] sm:text-2xl md:text-3xl"> {/* Responsive text size */}
+            Why Choose Us
+          </p>
+
+        </motion.div>
+        <div className="flex w-[100%] px-[3%]">
+          <div className="w-[35%] px-2">
+            {
+              Whychoose.map((data, i) => {
+                return (
+                  <>
+                    <div key={i}>
+                      <ul className="mt-5">
+                        {data.points.map((data, i) => {
+                          return (
+                            <div className="flex items-center gap-2">
+                              <span><img className="mt-5" src={Star} alt="" /> </span><li className="text-white text-start mt-5" key={i}>{data.text}</li>
+                            </div>
+                          )
+                        })}
+                      </ul>
+                    </div>
+                  </>
+                )
+              })
+            }
+          </div>
+          <div className="w-[65%] text-white">
+            <div>
+              <div>
+                {
+                  Whychoose.map((data, i) => {
+                    return (
+                      <>
+                        <div key={i} className="flex flex-row gap-10">
+
+                          {data.divpoint.map((data, i) => {
+                            return (
+                              <>
+                                <div class="e-card playing">
+                                  <div class="image"></div>
+
+                                  <div class="wave"></div>
+                                  <div class="wave"></div>
+                                  <div class="wave"></div>
+
+
+                                  <div class="infotop">
+                                  <p key={i}>{data.head}</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+                                      </svg>
+                                      <p>{data.text}</p>
+
+                                  </div>
+                                </div>
+                              </>
+                            )
+                          })}
+
+                        </div>
+                      </>
+                    )
+                  })
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </LampContainer>
   );
 }
+
+
+/* From Uiverse.io by MikeAndrewDesigner */

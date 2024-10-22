@@ -37,21 +37,25 @@ const Hero = () => {
                             </Button>
                         </div>
                         <div className='z-10'>
-                            <button className=' py-2 px-4 border rounded-3xl bg-gray-400 hover:bg-white hover:text-black'>Get in Touch</button>
+                            <button class="cssbuttons-io">
+                                <span>
+                                    Get in Touch
+                                </span>
+                            </button>
                         </div>
                     </div>
                     <div className='mt-[8%] p-0'>
-                    <QuoteBtn/>
+                        <QuoteBtn />
                     </div>
                 </div>
                 <div className="z-10 mt-[3%]">
                     <img className='' src={Heroimg} alt="" />
                 </div>
             </section>
-            <Whoweare/>
-            <Ourproduct/>
-            <Contact/>
-            <Faq/>
+            <Whoweare />
+            <Ourproduct />
+            <Contact />
+            <Faq />
         </>
     );
 };

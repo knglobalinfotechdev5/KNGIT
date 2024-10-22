@@ -14,9 +14,9 @@ export default function Faq(className) {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <section className={`py-[30px] md:px-[80px] px-[20px] 2xl:px-[12%] ${className}`}>
+    <section className={`py-[30px] md:px-[80px] bg-gray-400 px-[20px] 2xl:px-[12%] ${className}`}>
       <div>
-        <h1 className='text-[24px] font-bold text-center text-white'>FAQ</h1>
+        <h1 className='text-[34px] font-extrabold text-center'>FAQ</h1>
       </div>
       <motion.div
         initial={{
