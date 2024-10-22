@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
-import defaultTheme from "tailwindcss/defaultTheme"; // Use ES module import
-import colors from "tailwindcss/colors"; // Use ES module import
+// import defaultTheme from "tailwindcss/defaultTheme"; // Use ES module import
+// import colors from "tailwindcss/colors"; // Use ES module import
 
 export default {
   content: [
@@ -23,12 +23,8 @@ export default {
           default: '#0F172A',
         }
       },
-      // Include any other extensions you might have from defaultTheme or colors
-      // Example:
-      // fontFamily: {
-      //   sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      // },
-    },  // Keep the existing extend structure
+      // You can add other extensions from defaultTheme or colors if needed
+    },
   },
   plugins: [
     // Include the custom plugin to add color variables

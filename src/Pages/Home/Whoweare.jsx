@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 
 const Whoweare = () => {
     return (
-        <section className="flex py-12 justify-center bg-darkblue-default h-fit w-[100%] px-[5%] z-10">
+        <section className="flex py-12 justify-center bg-darkblue-default h-fit w-full px-5 z-10">
             <div className='flex flex-col items-center overflow-hidden justify-center mt-6 border bg-gray-400 rounded-3xl border-white p-2'>
                 <div className='bg-gray-500 px-4 py-2 mt-8 rounded-lg w-fit z-10'>
                     <p className='text-white'>Who we are?</p>
                 </div>
 
-                <div className='mt-[3%]'>
+                <div className='mt-6'>
                     {WhoWeAre.map((data, i) => {
                         return (
                             <div key={i} className="flex flex-col">
@@ -32,10 +32,10 @@ const Whoweare = () => {
                                     </motion.p>
                                 </motion.div>
                                 
-                                <div className='flex gap-10 px-5 mt-8'>
-                                    <div className='z-10 w-[50%]'>
+                                <div className='flex flex-col md:flex-row gap-5 px-5 mt-8'>
+                                    <div className='z-10 w-full md:w-1/2'>
                                         <motion.img
-                                            className='w-full h-[550px]'
+                                            className='w-full h-auto md:h-[550px] object-cover'
                                             src="https://knglobalinfotech.in/assets/about-rLTSLX3P.jpg"
                                             alt=""
                                             initial={{ scale: 0 }}      // Initial state for image animation
@@ -43,7 +43,7 @@ const Whoweare = () => {
                                             transition={{ duration: 0.5 }} // Transition duration for image
                                         />
                                     </div>
-                                    <div className='w-[50%] flex text-justify'>
+                                    <div className='w-full md:w-1/2 flex text-justify'>
                                         <motion.div
                                             initial={{ opacity: 0, x: 100 }} // Start from right (x: 100)
                                             whileInView={{ opacity: 1, x: 0 }} // Final state (move to x: 0)

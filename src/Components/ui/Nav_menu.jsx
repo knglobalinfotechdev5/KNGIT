@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 // Transition configuration for animations
@@ -14,11 +14,25 @@ const transition = {
 
 // MenuItem Component
 export const MenuItem = ({ setActive, active, item, children }) => {
+  const handleClick = () => {
+    // Toggle active state on click for mobile
+    if (window.innerWidth <= 768) { // Mobile view breakpoint
+      if (active === item) {
+        setActive(null); // Deselect if already active
+      } else {
+        setActive(item); // Set to active item
+      }
+    } else {
+      // Desktop view behavior
+      setActive(item); // Just set it to active
+    }
+  };
+
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
+    <div onClick={handleClick} className="relative cursor-pointer">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-white hover:opacity-[0.9]"
+        className="sm:text-black text-white hover:opacity-[0.9]"
       >
         {item}
       </motion.p>
@@ -33,7 +47,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="bg-darkblue-default backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2]shadow-xl"
+                className="bg-darkblue-default backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}
@@ -49,10 +63,14 @@ export const MenuItem = ({ setActive, active, item, children }) => {
 
 // Menu Component
 export const Menu = ({ setActive, children }) => {
+  const handleMouseLeave = () => {
+    setActive(null); // resets the state
+  };
+
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full bg-darkblue-default border  shadow-input flex items-center  h-[60px]"
+      onMouseLeave={handleMouseLeave} // resets the state
+      className="relative rounded-full antialiased md:w-full md:px-10 bg-white/[0.5] backdrop-blur-xl border sm:text-[17px] text-[11px] shadow-input flex items-center h-[60px]"
     >
       {children}
     </nav>
@@ -71,10 +89,10 @@ export const ProductItem = ({ title, description, href, src }) => {
         height={70} // Add height directly for the image
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-white">
+        <h4 className="sm:text-xl text-[12px] font-bold mb-1 text-white">
           {title}
         </h4>
-        <p className="text-gray-300 text-sm max-w-[10rem]">
+        <p className="text-gray-300 sm:text-sm text-[8px] max-w-[10rem]">
           {description}
         </p>
       </div>
@@ -93,3 +111,25 @@ export const HoveredLink = ({ children, ...rest }) => {
     </a>
   );
 };
+
+// Example of using the components
+const ExampleComponent = () => {
+  const [activeItem, setActiveItem] = useState(null);
+
+  return (
+    <Menu setActive={setActiveItem}>
+      <MenuItem setActive={setActiveItem} active={activeItem} item="Item 1">
+        <div>Details about Item 1</div>
+      </MenuItem>
+      <MenuItem setActive={setActiveItem} active={activeItem} item="Item 2">
+        <div>Details about Item 2</div>
+      </MenuItem>
+      <MenuItem setActive={setActiveItem} active={activeItem} item="Item 3">
+        <div>Details about Item 3</div>
+      </MenuItem>
+    </Menu>
+  );
+};
+
+// Export your ExampleComponent to use in your app
+export default ExampleComponent;

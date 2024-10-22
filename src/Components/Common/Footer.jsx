@@ -1,4 +1,10 @@
 import React from 'react';
+import { Logo } from "../../Assets/data";
+import { Link } from 'react-router-dom';
+import FbAnimation from '../../Assets/Lottifile/Fb-Ani.json'
+import InstaAnimation from '../../Assets/Lottifile/Insta-Ani.json'
+import LinkedinAnimation from '../../Assets/Lottifile/Linkedin-Ani.json'
+import LottieAnimation from '../../AnimationIcons';
 
 const Footer = () => {
   return (
@@ -7,7 +13,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between">
           {/* Logo and Description */}
           <div className="mb-6 md:mb-0">
-            <h1 className="text-2xl font-bold">YourCompany</h1>
+          <Link  to="/"><img className="w-[90px] h-[50px] rounded-md" src={Logo} alt="logo" /></Link>
             <p className="mt-2">Your tagline or description goes here. A brief overview of your business.</p>
           </div>
 
@@ -32,13 +38,18 @@ const Footer = () => {
           </div>
 
           {/* Social Media Links */}
-          <div className="mb-6 md:mb-0">
-            <h2 className="font-semibold mb-2">Follow Us</h2>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Twitter</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
+          <div className="mb-6 mr-3 md:mb-0">
+            <h2 className="mb-1">Follow Us</h2>
+            <div className="flex">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <LottieAnimation animationData={FbAnimation} ClassStyle={'h-[40px] w-[50px]'}/>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <LottieAnimation animationData={InstaAnimation} ClassStyle={'h-[40px] w-[50px]'}/>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <LottieAnimation animationData={LinkedinAnimation} ClassStyle={'h-[40px] w-[50px]'}/>
+              </a>
             </div>
           </div>
         </div>

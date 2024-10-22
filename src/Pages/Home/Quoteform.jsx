@@ -8,7 +8,7 @@ import {
   ModalTrigger,
 } from "../../Components/ui/animated-modal";
 // import { motion } from "framer-motion";
-import QuoteRequest from "./QuoteRequest";
+import SoftwareQuoteRequest from "../Home/QuoteRequest";
 
 export function QuoteBtn() {
   const images = [
@@ -62,7 +62,7 @@ export function QuoteBtn() {
                 </motion.div>
               ))}
             </div> */}
-            <QuoteRequest/>
+            <SoftwareQuoteRequest/>
             
           </ModalContent>
         </ModalBody>
