@@ -4,10 +4,10 @@ import Footer from './Components/Common/Footer'
 import { BackgroundBoxes } from './Pages/Home/Bg_hero'
 import { Route, Routes } from 'react-router-dom'
 import { About } from './Pages/About/About'
-import { KNGas } from './Pages/Projucts/KNGas'
 import { KNStore } from './Pages/Projucts/KNStore'
 import { KNTrans } from './Pages/Projucts/KNTrans'
 import WhatsAppButton from './Whatsapp'
+import KNGas from './Pages/Projucts/KNGas'
 
 const App = () => {
   return (

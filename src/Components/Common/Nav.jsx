@@ -4,6 +4,7 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/Nav_menu";
 import { cn } from "../lib/utils";
 import { Gas, KNGIT, Logo } from "../../Assets/data";
 import { Link } from 'react-router-dom';
+import { LampContainer } from "../ui/lamp";
 
 export function NavbarDemo() {
   return (
@@ -26,6 +27,7 @@ function Navbar({ className }) {
   };
 
   return (
+    <>
     <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
       <Menu setActive={setActive}>
         <div className="flex items-center sm:gap-[100px] gap-[120px]">
@@ -185,5 +187,7 @@ function Navbar({ className }) {
         </div>
       </Menu>
     </div>
+
+    </>
   );
 }
