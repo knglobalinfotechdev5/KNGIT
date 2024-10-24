@@ -25,7 +25,7 @@ const KNGas = () => {
      
         </div>
       </section>
-      <div className='m-0 w-screen sm:block hidden'>
+      <div className='m-0 w-screen '>
       <StickyScroll content={GasContent} />
       </div>
     </LampContainer></>
