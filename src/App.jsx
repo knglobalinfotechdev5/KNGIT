@@ -10,6 +10,10 @@ import KNTrans from './Pages/Projucts/KNTrans';
 import KNWeb from './Pages/Projucts/KNWeb';
 import Preloader from './Components/Common/Preloader copy';
 import Footer from './Components/Common/Footer';
+import OurTeam from './Pages/About/OurTeam';
+import Terms_Conditions from './Pages/About/Terms_Conditions';
+import PrivacyPolicy from './Pages/About/PrivacyPolicy';
+import RefundPolicy from './Pages/About/RefundPolicy';
 
 
 const App = () => {
@@ -46,6 +50,10 @@ const App = () => {
             <Route path="/knsms" element={<KNStore />} />
             <Route path="/kntran" element={<KNTrans />} />
             <Route path="/knweb" element={<KNWeb />} />
+            <Route path="/knteam" element={<OurTeam />} />
+            <Route path="/knterms" element={<Terms_Conditions />} />
+            <Route path="/knpolicy" element={<PrivacyPolicy />} />
+            <Route path="/knrefund" element={<RefundPolicy />} />
           </Routes>
           <WhatsAppButton />
           <Footer />

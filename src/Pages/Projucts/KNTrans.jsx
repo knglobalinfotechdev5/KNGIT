@@ -25,7 +25,9 @@ const KNTrans = () => {
      
         </div>
       </section>
+      <div className='m-0 w-screen sm:block hidden'>
       <StickyScroll content={GasContent} />
+      </div>
     </LampContainer></>
   );
 };

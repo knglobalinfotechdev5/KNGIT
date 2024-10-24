@@ -4,7 +4,6 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/Nav_menu";
 import { cn } from "../lib/utils";
 import { Gas, KNGIT, Logo } from "../../Assets/data";
 import { Link } from 'react-router-dom';
-import { LampContainer } from "../ui/lamp";
 
 export function NavbarDemo() {
   return (
@@ -35,11 +34,9 @@ function Navbar({ className }) {
               <Link to="/">
                 <img className="w-[90px] h-[50px] rounded-md" src={Logo} alt="logo" />
               </Link>
-              {/* <img className="sm:w-[140px] w-[100px] h-[180px]" src={KNGIT} alt="" /> */}
               <p className="text-white font-extrabold" style={{ fontFamily: 'Philosopher, sans-serif' }}>
                 KN Global Infotech
               </p>
-
             </div>
 
             {/* Mobile Menu Button */}
@@ -47,14 +44,23 @@ function Navbar({ className }) {
               className="sm:hidden flex items-center justify-between text-white w-fit p-2 border border-gray-300 rounded-md"
               onClick={toggleMenu}
             >
-              <svg
-                className={`w-6 h-6 transition-transform duration-200 ${isOpen ? 'transform rotate-90' : ''}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
+              <div className="relative w-6 h-6">
+                {/* Top Line */}
+                <span
+                  className={`absolute top-0 left-0 w-full h-[2px] bg-white transition-transform duration-300 ease-in-out
+                  ${isOpen ? 'rotate-45 translate-y-[10px]' : 'rotate-0'}`}
+                ></span>
+                {/* Middle Line */}
+                <span
+                  className={`absolute top-1/2 left-0 w-full h-[2px] bg-white transition-opacity duration-300 ease-in-out
+                  ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+                ></span>
+                {/* Bottom Line */}
+                <span
+                  className={`absolute bottom-0 left-0 w-full h-[2px] bg-white transition-transform duration-300 ease-in-out
+                  ${isOpen ? '-rotate-45 -translate-y-[10px]' : 'rotate-0'}`}
+                ></span>
+              </div>
             </button>
 
             {/* Mobile Menu Items */}
@@ -108,16 +114,16 @@ function Navbar({ className }) {
                     <Link to="/about" onClick={handleMenuItemClick}>
                       <HoveredLink>Company Profile</HoveredLink>
                     </Link>
-                    <Link to="/our-team" onClick={handleMenuItemClick}>
+                    <Link to="/knteam" onClick={handleMenuItemClick}>
                       <HoveredLink>Our Team</HoveredLink>
                     </Link>
-                    <Link to="/terms-and-conditions" onClick={handleMenuItemClick}>
+                    <Link to="/knterms" onClick={handleMenuItemClick}>
                       <HoveredLink>Terms & Conditions</HoveredLink>
                     </Link>
-                    <Link to="/privacy-policy" onClick={handleMenuItemClick}>
+                    <Link to="/knpolicy" onClick={handleMenuItemClick}>
                       <HoveredLink>Privacy Policy</HoveredLink>
                     </Link>
-                    <Link to="/refund-policy" onClick={handleMenuItemClick}>
+                    <Link to="/knrefund" onClick={handleMenuItemClick}>
                       <HoveredLink>Refund Policy</HoveredLink>
                     </Link>
                   </div>
@@ -127,13 +133,9 @@ function Navbar({ className }) {
 
             {/* Desktop Menu Items */}
             <div className="hidden sm:flex sm:gap-4 gap-2">
-              <MenuItem setActive={setActive} active={active} item="Home">
-                <a href="/" className="flex flex-col space-y-4 text-sm" onClick={handleMenuItemClick}>
-                  <HoveredLink>Who We Are</HoveredLink>
-                  <HoveredLink>Our Products</HoveredLink>
-                  <HoveredLink>Contact Us</HoveredLink>
-                </a>
-              </MenuItem>
+              <a href="/" className="flex flex-col space-y-4 text-l" onClick={handleMenuItemClick}>
+                Home
+              </a>
 
               <MenuItem setActive={setActive} active={active} item="Products">
                 <div className="text-sm grid grid-cols-2 gap-10 p-4">
@@ -173,16 +175,16 @@ function Navbar({ className }) {
                   <Link to="/about" onClick={handleMenuItemClick}>
                     <HoveredLink>Company Profile</HoveredLink>
                   </Link>
-                  <Link to="/our-team" onClick={handleMenuItemClick}>
+                  <Link to="/knteam" onClick={handleMenuItemClick}>
                     <HoveredLink>Our Team</HoveredLink>
                   </Link>
-                  <Link to="/terms-and-conditions" onClick={handleMenuItemClick}>
+                  <Link to="/knterms" onClick={handleMenuItemClick}>
                     <HoveredLink>Terms & Conditions</HoveredLink>
                   </Link>
-                  <Link to="/privacy-policy" onClick={handleMenuItemClick}>
+                  <Link to="/knpolicy" onClick={handleMenuItemClick}>
                     <HoveredLink>Privacy Policy</HoveredLink>
                   </Link>
-                  <Link to="/refund-policy" onClick={handleMenuItemClick}>
+                  <Link to="/knrefund" onClick={handleMenuItemClick}>
                     <HoveredLink>Refund Policy</HoveredLink>
                   </Link>
                 </div>
@@ -191,7 +193,6 @@ function Navbar({ className }) {
           </div>
         </Menu>
       </div>
-
     </>
   );
 }

@@ -7,7 +7,7 @@ const Footer = () => {
 
   // Business hours
   const openingHours = {
-    0: `SUN ${<span> </span>}  Closed`, // Sunday
+    0: `SUN   09:00 AM – 06:00 PM`, // Sunday
     1: 'MON   09:00 AM – 06:00 PM', // Monday
     2: 'TUE   09:00 AM – 06:00 PM', // Tuesday
     3: 'WED   09:00 AM – 06:00 PM', // Wednesday
@@ -95,9 +95,10 @@ const Footer = () => {
             <h2 className="text-lg font-semibold mb-4">Address</h2>
             <div className="address-links">
               <ul className="list-none">
-                <li className="address1 flex items-center text-white"><i className="fa-solid fa-location-dot mr-2"></i> Kolathur Ramankulam - Malappuram Dt, Kerala 679338</li>
-                <li><a href="#" className="text-white hover:text-blue-400"><i className="fa-solid fa-phone mr-2"></i> +91 90904500112</a></li>
-                <li><a href="#" className="text-white hover:text-blue-400"><i className="fa-solid fa-envelope mr-2"></i> mail@1234567.com</a></li>
+                <li className="address1 flex items-center text-white"><i className="fa-solid fa-location-dot mr-2"></i>49/1, Dr Subbarayan Rd, <br /> I Agraharam,
+                Salem,<br /> Tamil Nadu - 636001, India.</li>
+                <li className='mt-2'><a href="#" className="text-white hover:text-blue-400"><i className="fa-solid fa-phone mr-2"></i> +91 9500706954</a></li>
+                <li className='mt-2'><a href="#" className="text-white hover:text-blue-400"><i className="fa-solid fa-envelope mr-2"></i> support@knglobalinfotech.com</a></li>
               </ul>
             </div>
           </div>

@@ -82,10 +82,10 @@ export function About() {
                       <div className="wave"></div>
                       <div className="wave"></div>
                       <div className="wave"></div>
-                      <div className="infotop">
-                        <p>{point.head}</p>
+                        <div className="infotop">
+                        <p className="font-extrabold text-[21px]">{point.head}</p>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="icon"></svg>
-                        <p>{point.text}</p>
+                        <p className="text-justify px-3">{point.text}</p>
                       </div>
                     </div>
                   ))}

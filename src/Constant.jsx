@@ -298,7 +298,7 @@ export const TermsAndConditions = [
     },
 ];
 
-export const Team = [
+export const OurTeamData = [
     {
         id: 1,
         img: '',
@@ -306,14 +306,6 @@ export const Team = [
         name: "Aneesdeen",
         content:
             "Mr. Aneesdeen, armed with a Master of Science in Information Technology attained in 2007, embarked on his professional journey in 2008 as a software developer in the dynamic landscape of the Middle East. Over the years, he has seamlessly transitioned through various pivotal roles, including technical team leader, software team leader, and solution manager.With a wealth of experience spanning over a decade, Aneesdeen has honed his expertise in Enterprise Resource Planning (ERP) systems and Software Development Life Cycle (SDLC) methodologies across a diverse array of industries. His adeptness in navigating the intricacies of ERP implementation and management has contributed to the operational efficiency and growth of numerous organizations.In 2023, leveraging his extensive industry knowledge and visionary outlook, Aneesdeen embarked on a new chapter in his professional odyssey by founding KN GLOBAL INFO TECH, a testament to his entrepreneurial spirit and commitment to driving innovation in the technological sphere.As the Managing Director of KN GLOBAL INFO TECH, Aneesdeen brings forth a potent blend of leadership, technical prowess, and strategic acumen, steering the company towards unprecedented heights of success. Under his guidance, KN GLOBAL INFO TECH continues to thrive as a beacon of innovation, delivering cutting-edge solutions that empower businesses to transcend boundaries and achieve their full potential.",
-    },
-    {
-        id: 2,
-        img: '',
-        profession: "OPERATION MANAGER",
-        name: "Kumar",
-        content:
-            "Mr. Kumar completed his Master of Commerce degree in 2005. With a solid foundation in finance, accounting, and business management, Kumar has developed a comprehensive understanding of commercial principles and practices. His academic achievements have equipped him with the skills necessary to excel in various financial and operational roles.Kumar has accumulated significant professional experience, particularly in the Gulf region, where he spent eight years in a supporting role. During this time, he honed his expertise in business operations, client relations, and support services. His experience in the Gulf has given him a unique perspective on international business practices and the ability to navigate diverse cultural environments.Currently, Kumar serves as the Operations Manager at KN Global Info Tech. In this capacity, he is responsible for overseeing the daily operations of the company, ensuring that all processes run smoothly and efficiently. Kumar's role involves coordinating between different departments, optimizing operational workflows, and implementing strategic initiatives to enhance productivity and customer satisfaction. His leadership and management skills have been pivotal in driving the company's growth and operational excellence.",
     },
 ];
 
