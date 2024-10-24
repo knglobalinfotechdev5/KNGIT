@@ -13,6 +13,7 @@ export default {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        philosopher: ['Philosopher', 'sans-serif'],
       },
       colors: {
         gray: {

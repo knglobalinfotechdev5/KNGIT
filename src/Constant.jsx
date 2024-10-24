@@ -64,6 +64,8 @@
 //         ]
 //     },
 
+import { Gas1, Gas2 } from "./Assets/data";
+
 // ]
 
 
@@ -350,7 +352,7 @@ export const Refund = [
 
 
 // 5. KN Store Management System
-export const  StoreManagement = [
+export const StoreManagement = [
 
     {
         id: 5,
@@ -405,7 +407,7 @@ export const  StoreManagement = [
 ];
 
 // 1. KN Gas Distribution System
-export const  knGasApplication = [
+export const knGasApplication = [
 
     {
         id: 1,
@@ -460,52 +462,351 @@ export const  knGasApplication = [
 ]
 
 
+// export const GasContent = [
+//     {
+//       title: "Purchase Management",
+//       description:
+//         "The Purchase Management module facilitates the recording and management of incoming inventory and supplier information. The Purchase Analysis feature provides insights into purchasing trends and supplier performance, helping businesses optimize their procurement processes.",
+//       content: (
+//         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//           Collaborative Editing
+//         </div>
+//       ),
+//     },
+//     {
+//       title: "Sales Management",
+//       description:
+//         "In the Sales Management module, users can process various types of sales transactions, including Cash Sales and UPI Sales. The Sales Analysis feature offers detailed reports and insights into sales trends, enabling businesses to assess performance and make informed decisions.",
+//       content: (
+//         <div className="h-full w-full flex items-center justify-center text-white">
+//           <img
+//             src=""
+//             width={300}
+//             height={300}
+//             className="h-full w-full object-cover"
+//             alt="linear board demo"
+//           />
+//         </div>
+//       ),
+//     },
+//     {
+//       title: "Inventory Management",
+//       description:
+//         "The Inventory Management module offers a holistic view of stock levels through the Stock Summary Report. It analyzes stock distribution with Location Wise Stock Reports and tracks product availability per customer through Customer Wise Stock. Features like Empty Cylinder Collection and Stock Movement Report help manage inventory efficiently.",
+//       content: (
+//         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+//           Version control
+//         </div>
+//       ),
+//     },
+//     {
+//       title: "Sales report",
+//       description:
+//         "The Reporting module provides access to various essential documents, including the Daily Sales Report and Sales Inactive Report, enabling businesses to monitor performance and make informed decisions based on data.",
+//       content: (
+//         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//           Running out of content
+//         </div>
+//       ),
+//     },
+//     {
+//         title: "Task Management",
+//         description:
+//           "The Task Management module organizes and tracks tasks related to various operational areas, ensuring that team members are aligned and productive.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Collection and Delivery",
+//         description:
+//           "The Collection and Delivery module manages the logistics of collecting payments and delivering products, ensuring that operations run smoothly and customer satisfaction is maintained.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Location Management",
+//         description:
+//           "The module provides detailed information on cylinder distribution across multiple locations. Users can view how many filled and empty cylinders are stored in each location, enabling better inventory management and logistics planning.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Stock Summary Report",
+//         description:
+//           "This report offers a comprehensive overview of the current stock levels, including total counts of filled and empty cylinders across all locations. It helps in assessing inventory status at a glance.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Location Wise Stock Report",
+//         description:
+//           "This feature allows users to generate detailed reports based on specific storage locations. Users can see how many filled and empty cylinders are present at each location, facilitating easier inventory audits and stock replenishment",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Customer Wise Stock",
+//         description:
+//           "Track the availability of filled and empty cylinders allocated to specific customers. This helps in managing customer commitments and ensuring timely deliveries.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Empty Cylinder Collection",
+//         description:
+//           "The module includes functionality to manage the collection of empty cylinders from customers. Users can log returns, track collection schedules, and maintain records of collected cylinders.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Stock Movement Report",
+//         description:
+//           "Monitor the movement of cylinders between locations or during transactions. This report provides insights into how inventory levels change over time, helping to identify trends and optimize stock levels.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Stock Adjustment",
+//         description:
+//           "Easily handle discrepancies in cylinder counts due to losses, damages, or other reasons. This feature allows users to adjust inventory records accurately and maintain integrity.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+//       {
+//         title: "Cylinder Details Report",
+//         description:
+//           "Generate detailed reports that include information such as the type of cylinder, quantity, condition (filled or empty), location, and any relevant transaction history.",
+//         content: (
+//           <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+//             Running out of content
+//           </div>
+//         ),
+//       },
+
+//   ];
+
 export const GasContent = [
     {
-      title: "Collaborative Editing",
-      description:
-        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
-      content: (
-        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-          Collaborative Editing
-        </div>
-      ),
+        title: "Purchase Management",
+        description: (
+            <ul className="list-disc list-inside space-y-2">
+                <li>
+                    <span className="font-extrabold text-[20px] ">Efficient Supplier Management:</span> Streamlines recording and management of incoming inventory and supplier data.
+                </li>
+                <li>
+                    <span className="font-extrabold text-[20px] ">Data-Driven Insights:</span> The Purchase Analysis feature helps identify purchasing trends and evaluates supplier performance to optimize procurement.
+                </li>
+            </ul>
+        ),
+        content: (
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas1}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
+            </div>
+        ),
     },
     {
-      title: "Real time changes",
-      description:
-        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white">
-          <img
-            src=""
-            width={300}
-            height={300}
-            className="h-full w-full object-cover"
-            alt="linear board demo"
-          />
-        </div>
-      ),
+        title: "Sales Management",
+        description: (
+            <ul className="list-disc list-inside space-y-2">
+                <li>
+                    <span className="font-extrabold text-[20px] ">Versatile Transaction Processing:</span> Supports various sales types, including Cash Sales and UPI Sales.
+                </li>
+                <li><span className="font-extrabold text-[20px] ">Comprehensive Sales Analysis:</span> Provides detailed reports on sales trends, aiding businesses in performance assessment and decision-making.
+                </li>
+            </ul>
+        ),
+        content: (
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas2}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
+            </div>
+        ),
     },
     {
-      title: "Version control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-          Version control
-        </div>
-      ),
+        title: "Inventory Management",
+        description: (
+            <ul className="list-disc list-inside space-y-2">
+                <li>
+                    <span className="font-extrabold text-[20px] ">Holistic Stock Overview:</span> Offers a comprehensive view of stock levels through the Stock Summary Report.
+                </li>
+                <li><span className="font-extrabold text-[20px] ">Location-Specific Insights:</span> Analyzes stock distribution with Location Wise Stock Reports.
+                </li>
+                <li><span className="font-extrabold text-[20px] ">Customer-Centric Stock Tracking:</span> Monitors product availability per customer, ensuring efficient inventory management.
+                </li>
+                <li><span className="font-extrabold text-[20px] ">Efficient Cylinder Collection:</span> Manages the collection of empty cylinders and tracks stock movements effectively.
+                </li>
+            </ul>
+        ),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+                Version control
+            </div>
+        ),
     },
     {
-      title: "Running out of content",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-          Running out of content
-        </div>
-      ),
+        title: "Reporting Module",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Performance Monitoring:</span> Access to key documents like the Daily Sales Report and Sales Inactive Report, enabling informed decision-making based on data analysis.
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
     },
-  ];
-  
+    {
+        title: "Task Management",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Organized Workflow:</span> Tracks and organizes tasks across operational areas, enhancing team alignment and productivity.
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Collection and Delivery",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Logistics Optimization:</span> Manages payment collection and product delivery processes, ensuring operational efficiency and customer satisfaction.
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Location Management",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Cylinder Distribution Insights:</span> Provides detailed data on cylinder storage across multiple locations, enabling better logistics planning and inventory management.
+
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Stock Summary Report",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Quick Inventory Assessment:</span> Offers a snapshot of stock levels, including filled and empty cylinders, for quick status checks.
+
+
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Location Wise Stock Report",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Detailed Inventory Audits:</span> Generates reports for specific storage locations, simplifying inventory audits and stock replenishment.
+
+
+
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Customer Wise Stock",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Commitment Management:</span> Tracks the allocation of filled and empty cylinders to customers, ensuring timely deliveries and managing commitments effectively.
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Empty Cylinder Collection",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Return Management:</span> Logs returns, tracks collection schedules, and maintains records of collected cylinders for streamlined operations.
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Stock Movement Report",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Trend Analysis:</span> Monitors cylinder movement between locations and transactions, providing insights to optimize inventory levels over time.
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Stock Adjustment",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Accurate Record Maintenance:</span> Handles discrepancies in cylinder counts due to various reasons, ensuring inventory integrity.
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+    {
+        title: "Cylinder Details Report",
+        description:
+            (<li><span className="font-extrabold text-[20px] ">Comprehensive Data Access:</span> Generates reports detailing cylinder types, quantities, conditions, locations, and transaction history for informed management decisions.
+            </li>),
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+
+];

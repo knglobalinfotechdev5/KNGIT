@@ -18,15 +18,16 @@ const KNGas = () => {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mt-8 sm:bg-gradient-to-br from-slate-300 to-slate-500 bg-white py-4 bg-clip-text text-center text-3xl sm:font-medium font-extrabold tracking-tight text-transparent sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+            className="mt-[21%] sm:bg-gradient-to-br from-slate-300 to-slate-500 bg-white py-4 bg-clip-text text-center text-3xl sm:font-medium font-extrabold tracking-tight text-transparent sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
           >
-            About Us
+            KN Gas Application
           </motion.h1>
-          <div className="p-10">
-      <StickyScroll content={GasContent} />
-    </div>
+     
         </div>
       </section>
+      <div className='m-0 w-screen sm:block hidden'>
+      <StickyScroll content={GasContent} />
+      </div>
     </LampContainer></>
   );
 };

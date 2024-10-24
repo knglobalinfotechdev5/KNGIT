@@ -1,64 +1,120 @@
 import React from 'react';
-import { Logo } from "../../Assets/data";
-import { Link } from 'react-router-dom';
-import FbAnimation from '../../Assets/Lottifile/Fb-Ani.json'
-import InstaAnimation from '../../Assets/Lottifile/Insta-Ani.json'
-import LinkedinAnimation from '../../Assets/Lottifile/Linkedin-Ani.json'
-import LottieAnimation from '../../AnimationIcons';
+import { FooterVid, Logo } from '../../Assets/data';
 
 const Footer = () => {
+  const currentHour = new Date().getHours();
+  const currentDay = new Date().getDay();
+
+  // Business hours
+  const openingHours = {
+    0: 'Closed', // Sunday
+    1: '09:00 AM – 06:00 PM', // Monday
+    2: '09:00 AM – 06:00 PM', // Tuesday
+    3: '09:00 AM – 06:00 PM', // Wednesday
+    4: '09:00 AM – 06:00 PM', // Thursday
+    5: '09:00 AM – 06:00 PM', // Friday
+    6: '09:00 AM – 04:00 PM', // Saturday
+  };
+
+  const isOpen = currentDay !== 0 && (currentDay !== 6 || currentHour < 16); // Saturday open until 4 PM
+  const openingStatus = isOpen ? 'Open Now' : 'Closed';
+
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between">
-          {/* Logo and Description */}
-          <div className="mb-6 md:mb-0">
-          <Link  to="/"><img className="w-[90px] h-[50px] rounded-md" src={Logo} alt="logo" /></Link>
-            <p className="mt-2">Your tagline or description goes here. A brief overview of your business.</p>
+    <footer id="footer" className="relative bg-darkblue-default pt-5 w-full">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={FooterVid} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+
+      <div className="mx-auto relative flex flex-col lg:flex-row gap-8 px-4 text-white z-10">
+        <div className="flex flex-col lg:flex-row justify-around w-full lg:w-2/3">
+          {/* Logo and About Section */}
+          <div className="w-full lg:w-1/2 mb-6">
+            <a href="index.html">
+              <img
+                src={Logo}
+                alt="Company Logo"
+                className="img-fluid logo-footer max-w-xs"
+              />
+            </a>
+            <div className="footer-about mt-4">
+              <p className="text-white">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              </p>
+            </div>
           </div>
 
-          {/* Navigation Links */}
-          <div className="flex flex-col md:flex-row mb-6 md:mb-0">
-            <div className="mr-8">
-              <h2 className="font-semibold mb-2">Quick Links</h2>
-              <ul>
-                <li><a href="/about" className="hover:underline">About Us</a></li>
-                <li><a href="/services" className="hover:underline">Services</a></li>
-                <li><a href="/contact" className="hover:underline">Contact</a></li>
-                <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
+          {/* Business Hours Section */}
+          <div className="mt-8">
+            <h4 className="text-lg font-semibold">Business Hours</h4>
+            <ul className="list-none text-white mt-4">
+              <li>Mon: 09:00 AM – 06:00 PM</li>
+              <li>Tue: 09:00 AM – 06:00 PM</li>
+              <li>Wed: 09:00 AM – 06:00 PM</li>
+              <li>Thu: 09:00 AM – 06:00 PM</li>
+              <li>Fri: 09:00 AM – 06:00 PM</li>
+              <li>Sat: 09:00 AM – 04:00 PM</li>
+              <li>{openingStatus}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row justify-between w-full lg:w-1/3 px-4 gap-8">
+          {/* Useful Links Section */}
+          <div className="w-full mb-6">
+            <h2 className="text-lg font-semibold mb-4">Useful Links</h2>
+            <div className="use-links">
+              <ul className="list-none space-y-2">
+                <li><a href="index.html" className="text-white hover:text-blue-400">Home</a></li>
+                <li><a href="about.html" className="text-white hover:text-blue-400">About Us</a></li>
+                <li><a href="gallery.html" className="text-white hover:text-blue-400">Gallery</a></li>
+                <li><a href="contact.html" className="text-white hover:text-blue-400">Contact</a></li>
               </ul>
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="mb-6 md:mb-0">
-            <h2 className="font-semibold mb-2">Contact Us</h2>
-            <p>Email: info@yourcompany.com</p>
-            <p>Phone: (123) 456-7890</p>
+          {/* Social Links Section */}
+          <div className="w-full mb-6">
+            <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
+            <div className="social-icons">
+              <ul className="list-none flex flex-col space-y-2">
+                <li><a href="#" className="text-white hover:text-blue-400"><i className="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#" className="text-white hover:text-blue-400"><i className="fa-brands fa-instagram"></i> Instagram</a></li>
+                <li><a href="#" className="text-white hover:text-blue-400"><i className="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+              </ul>
+            </div>
           </div>
 
-          {/* Social Media Links */}
-          <div className="mb-6 mr-3 md:mb-0">
-            <h2 className="mb-1">Follow Us</h2>
-            <div className="flex">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              <LottieAnimation animationData={FbAnimation} ClassStyle={'h-[40px] w-[50px]'}/>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              <LottieAnimation animationData={InstaAnimation} ClassStyle={'h-[40px] w-[50px]'}/>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              <LottieAnimation animationData={LinkedinAnimation} ClassStyle={'h-[40px] w-[50px]'}/>
-              </a>
+          {/* Address Section */}
+          <div className="w-full mb-6">
+            <h2 className="text-lg font-semibold mb-4">Address</h2>
+            <div className="address-links">
+              <ul className="list-none">
+                <li className="address1 flex items-center text-white"><i className="fa-solid fa-location-dot mr-2"></i> Kolathur Ramankulam - Malappuram Dt, Kerala 679338</li>
+                <li><a href="#" className="text-white hover:text-blue-400"><i className="fa-solid fa-phone mr-2"></i> +91 90904500112</a></li>
+                <li><a href="#" className="text-white hover:text-blue-400"><i className="fa-solid fa-envelope mr-2"></i> mail@1234567.com</a></li>
+              </ul>
             </div>
           </div>
         </div>
-
-        {/* Copyright Section */}
-        <div className="mt-6 border-t border-gray-700 pt-4 text-center">
-          <p>&copy; {new Date().getFullYear()} YourCompany. All rights reserved.</p>
-        </div>
       </div>
+
+      <section id="copy-right">
+        <div className="copy-right-sec bg-darkblue-default text-white text-center py-6">
+          <i className="fa-solid fa-copyright"></i>
+          2024 KN GLOBAL INFOTECH. All rights reserve.
+        </div>
+      </section>
     </footer>
   );
 };
