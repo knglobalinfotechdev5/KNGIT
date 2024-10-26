@@ -147,14 +147,13 @@ const SoftwareQuoteRequest = ({ onClose }) => {
 
   return (
     <section className="flex justify-center items-center">
-      <div className="w-full max-w-xs p-6 bg-[#1a1a1a] text-white rounded-2xl border border-gray-700">
-        <h1 className="text-2xl font-bold mb-6 text-center text-[#00bfff] relative flex items-center">
-          <span className="absolute h-4 w-4 bg-[#00bfff] rounded-full left-0"></span>
+      <div className="w-[100%] p-6 bg-[#1a1a1a] text-white rounded-2xl border border-gray-700">
+        <h1 className="text-2xl font-bold mb-6 pl-5 text-center text-[#00bfff] relative flex items-center">
           Request a Quote
           <span className="absolute h-4 w-4 bg-[#00bfff] rounded-full left-0 animate-pulse"></span>
         </h1>
 
-        <form onSubmit={sendQuoteRequest} className="flex flex-col gap-4">
+        <form onSubmit={sendQuoteRequest} className="flex flex-col gap-2">
           <div className="relative">
             <input
               type="text"
