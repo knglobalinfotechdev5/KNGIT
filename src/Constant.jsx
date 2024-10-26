@@ -64,7 +64,7 @@
 //         ]
 //     },
 
-import { Gas1, Gas2 } from "./Assets/data";
+import { Confidentiality, Gas1, Gas2, Intellectual, MD, Scope } from "./Assets/data";
 
 // ]
 
@@ -253,6 +253,7 @@ export const TermsAndConditions = [
         content: [
             "KN GLOBAL INFO TECH agrees to develop software as per the specifications provided by the Client. Any changes to the project scope must be agreed upon in writing by both parties. Timely delivery depends on the Client providing necessary resources and feedback. Delays caused by the Client may alter delivery dates.",
         ],
+        vid: Scope,
     },
     {
         id: 2,
@@ -260,6 +261,7 @@ export const TermsAndConditions = [
         content: [
             "Payments will follow the schedule outlined in the project agreement, based on milestones or deliverables. Additional work outside the original scope will be billed separately at our standard rates or as agreed upon.",
         ],
+        vid: Scope,
     },
     {
         id: 3,
@@ -267,6 +269,7 @@ export const TermsAndConditions = [
         content: [
             "Upon full payment, the Client will own the rights to the developed software and associated intellectual property. We retain the right to use general knowledge gained during the project for future work and to include the project in portfolios or case studies.",
         ],
+        vid: Intellectual,
     },
     {
         id: 4,
@@ -274,6 +277,7 @@ export const TermsAndConditions = [
         content: [
             "Both parties agree to maintain confidentiality of any proprietary information exchanged during the project. This obligation extends beyond the project’s completion.",
         ],
+        vid: Confidentiality,
     },
     {
         id: 5,
@@ -301,7 +305,7 @@ export const TermsAndConditions = [
 export const OurTeamData = [
     {
         id: 1,
-        img: '',
+        img: MD,
         profession: "MANAGING DIRECTOR",
         name: "Aneesdeen",
         content:

@@ -34,17 +34,21 @@ const OurTeam = () => {
         {OurTeamData.map((data,i) => {
         return(
             <>
-            <div>
+            <div className='flex sm:flex-row flex-col items-center'>
+            <div className='sm:w-[45%] w-[100%]' >
                 <img src={data.img} alt="" />
             </div>
-            <div className='text-white'>
+            <div className='text-white sm:w-[55%] w-[100%]'>
                 <div>
-                    <h1>{data.profession}</h1>
-                    <h3>{data.name}</h3>
+                    <h1 className='text-[22px] font-semibold'>{data.profession}</h1>
+                    <br />
+                    <h3 className='text-[18px] font-semibold'>{data.name}</h3>
+                    <br />
                 </div>
                 <div>
-                    <p>{data.content}</p>
+                    <p className='text-justify indent-11'>{data.content}</p>
                 </div>
+            </div>
             </div>
             </>
         )

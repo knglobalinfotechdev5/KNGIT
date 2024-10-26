@@ -9,7 +9,7 @@ const SoftwareQuoteRequest = ({ onClose }) => {
     budget: "",
     timeline: "",
     message: "",
-    countryCode: "+971", // Default to UAE
+    countryCode: "+91", // Default to India
   });
 
   const [status, setStatus] = useState("");
@@ -90,7 +90,7 @@ const SoftwareQuoteRequest = ({ onClose }) => {
           budget: "",
           timeline: "",
           message: "",
-          countryCode: "+971",
+          countryCode: "+91",
         });
 
         const closeTimer = setTimeout(() => {
@@ -147,10 +147,14 @@ const SoftwareQuoteRequest = ({ onClose }) => {
 
   return (
     <section className="flex justify-center items-center">
-      <div className="w-full">
-        <h1 className="text-2xl font-bold mb-6 text-center">Request a Quote</h1>
+      <div className="w-full max-w-xs p-6 bg-[#1a1a1a] text-white rounded-2xl border border-gray-700">
+        <h1 className="text-2xl font-bold mb-6 text-center text-[#00bfff] relative flex items-center">
+          <span className="absolute h-4 w-4 bg-[#00bfff] rounded-full left-0"></span>
+          Request a Quote
+          <span className="absolute h-4 w-4 bg-[#00bfff] rounded-full left-0 animate-pulse"></span>
+        </h1>
 
-        <form onSubmit={sendQuoteRequest} className="flex flex-col gap-6">
+        <form onSubmit={sendQuoteRequest} className="flex flex-col gap-4">
           <div className="relative">
             <input
               type="text"
@@ -158,11 +162,11 @@ const SoftwareQuoteRequest = ({ onClose }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="peer mt-2 w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+              className="peer bg-[#333] text-white w-full p-4 pt-2.5 outline-none border border-gray-600 rounded-xl"
             />
-            <label className="absolute left-0 -top-3.5 text-gray-500 transition-all duration-200 peer-focus:-top-3.5 peer-focus:text-blue-600">
+            <span className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00bfff] transition-all">
               Name
-            </label>
+            </span>
             {errors.name && <span className="text-red-500 text-sm">{errors.name}</span>}
           </div>
 
@@ -173,49 +177,49 @@ const SoftwareQuoteRequest = ({ onClose }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="peer mt-2 w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+              className="peer bg-[#333] text-white w-full p-4 pt-2.5 outline-none border border-gray-600 rounded-xl"
             />
-            <label className="absolute left-0 -top-3.5 text-gray-500 transition-all duration-200 peer-focus:-top-3.5 peer-focus:text-blue-600">
+            <span className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00bfff] transition-all">
               Email
-            </label>
+            </span>
             {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
           </div>
 
-          <div className="relative">
-            <div className="flex">
-              <select
-                name="countryCode"
-                value={formData.countryCode}
-                onChange={handleChange}
-                className="peer mt-2 w-[100px] border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
-              >
-                <option value="+971">UAE (+971)</option>
-                <option value="+91">India (+91)</option>
-              </select>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="peer mt-2 w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
-              />
-            </div>
-            {errors.phone && <span className="text-red-500 text-sm">{errors.phone}</span>}
+          <div className="relative flex">
+            <select
+              name="countryCode"
+              value={formData.countryCode}
+              onChange={handleChange}
+              className="peer bg-[#333] text-white w-[100px] p-4 pt-2.5 outline-none border border-gray-600 rounded-xl"
+            >
+              <option value="+91">India (+91)</option>
+              <option value="+971">UAE (+971)</option>
+            </select>
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className="peer bg-[#333] text-white w-full p-4 pt-2.5 outline-none border border-gray-600 rounded-xl ml-2"
+            />
           </div>
+          {errors.phone && <span className="text-red-500 text-sm">{errors.phone}</span>}
 
           <div className="relative">
-            <input
-              type="text"
+            <select
               name="projectType"
               value={formData.projectType}
               onChange={handleChange}
               required
-              className="peer mt-2 w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
-            />
-            <label className="absolute left-0 -top-3.5 text-gray-500 transition-all duration-200 peer-focus:-top-3.5 peer-focus:text-blue-600">
-              Project Type
-            </label>
+              className="peer bg-[#333] text-white w-full p-4 pt-2.5 outline-none border border-gray-600 rounded-xl"
+            >
+              <option value="">Select Project Type</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Mobile App Development">Mobile App Development</option>
+              <option value="Software Consulting">Software Consulting</option>
+              <option value="Other">Other</option>
+            </select>
             {errors.projectType && <span className="text-red-500 text-sm">{errors.projectType}</span>}
           </div>
 
@@ -226,11 +230,11 @@ const SoftwareQuoteRequest = ({ onClose }) => {
               value={formData.budget}
               onChange={handleChange}
               required
-              className="peer mt-2 w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+              className="peer bg-[#333] text-white w-full p-4 pt-2.5 outline-none border border-gray-600 rounded-xl"
             />
-            <label className="absolute left-0 -top-3.5 text-gray-500 transition-all duration-200 peer-focus:-top-3.5 peer-focus:text-blue-600">
-              Budget (USD)
-            </label>
+            <span className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00bfff] transition-all">
+              Budget
+            </span>
             {errors.budget && <span className="text-red-500 text-sm">{errors.budget}</span>}
           </div>
 
@@ -241,11 +245,11 @@ const SoftwareQuoteRequest = ({ onClose }) => {
               value={formData.timeline}
               onChange={handleChange}
               required
-              className="peer mt-2 w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+              className="peer bg-[#333] text-white w-full p-4 pt-2.5 outline-none border border-gray-600 rounded-xl"
             />
-            <label className="absolute left-0 -top-3.5 text-gray-500 transition-all duration-200 peer-focus:-top-3.5 peer-focus:text-blue-600">
-              Project Timeline
-            </label>
+            <span className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00bfff] transition-all">
+              Timeline
+            </span>
             {errors.timeline && <span className="text-red-500 text-sm">{errors.timeline}</span>}
           </div>
 
@@ -255,30 +259,30 @@ const SoftwareQuoteRequest = ({ onClose }) => {
               value={formData.message}
               onChange={handleChange}
               required
-              rows="4"
-              className="peer mt-2 w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+              className="peer bg-[#333] text-white w-full p-4 pt-2.5 outline-none border border-gray-600 rounded-xl"
             />
-            <label className="absolute left-0 -top-3.5 text-gray-500 transition-all duration-200 peer-focus:-top-3.5 peer-focus:text-blue-600">
-              Additional Details
-            </label>
+            <span className="absolute left-4 top-3 text-gray-400 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00bfff] transition-all">
+              Additional details
+            </span>
             {errors.message && <span className="text-red-500 text-sm">{errors.message}</span>}
           </div>
 
-          {getAlertBox()}
+          <div>{getAlertBox()}</div>
+
+          {status === "success" && (
+            <p className="text-center text-gray-400">
+              This form will close in <span className="text-[#00bfff]">{countdown}</span> seconds.
+            </p>
+          )}
 
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring"
+            className="submit border-none outline-none py-2 px-4 rounded-xl bg-[#00bfff] hover:bg-[#00bfff96] text-white font-semibold text-lg"
+            disabled={status === "success"}
           >
-            Submit Quote Request
+            Submit
           </button>
         </form>
-
-        {status === "success" && (
-          <p className="text-center text-gray-500 mt-4">
-            This form will close in {countdown} seconds.
-          </p>
-        )}
       </div>
     </section>
   );

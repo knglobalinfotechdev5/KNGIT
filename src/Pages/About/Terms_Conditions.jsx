@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { TermsAndConditions } from '../../Constant'
 import { LampContainer } from '../../Components/ui/lamp'
+import LottieAnimation from '../../AnimationIcons';
 
 const Terms_Conditions = () => {
   return (
@@ -38,11 +39,15 @@ const Terms_Conditions = () => {
                 <img src={data.img} alt="" />
             </div>
             <div className='text-white'>
-                <div>
+                <div className={`flex ${i%2==0 ? 'md:flex-row flex-col' :'md:flex-row-reverse flex-col'}`}>
+                    <div className='basis-[55%] flex flex-col justify-center'>
                     <h1>{data.title}</h1>
-                </div>
-                <div>
+                    <br />
                     <p>{data.content}</p>
+                    </div>
+                    <div className='basis-[45%] flex justify-center'>
+                    <LottieAnimation  animationData={data.vid} loop={true} ClassStyle='w-[42%]' />
+                    </div>
                 </div>
             </div>
             </>
