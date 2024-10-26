@@ -40,9 +40,11 @@ const PrivacyPolicy = () => {
             <div className='text-white'>
                 <div>
                     <h1>{data.title}</h1>
+                    <br />
                 </div>
                 <div>
                     <p>{data.content}</p>
+                    <br /><br />
                 </div>
             </div>
             </>
