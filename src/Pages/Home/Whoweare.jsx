@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Whoweare = () => {
     return (
         <section className="flex py-12 justify-center bg-darkblue-default h-fit w-full px-5 z-10">
-            <div className='flex flex-col items-center overflow-hidden justify-center mt-6 border bg-gray-400 rounded-3xl border-white p-2'>
+            <div className='flex flex-col items-center overflow-hidden justify-center mt-6 border rounded-3xl border-white p-2'>
                 <div className='bg-gray-500 px-4 py-2 mt-8 rounded-lg w-fit z-10'>
                     <p className='text-white'>Who we are?</p>
                 </div>
@@ -23,7 +23,7 @@ const Whoweare = () => {
                                     <h1 className="z-10">{data.head}</h1>
                                     {/* Wrap only the paragraph in a motion div for animation */}
                                     <motion.p
-                                        className="z-10" 
+                                        className="z-10"
                                         initial={{ opacity: 0, y: 20 }} // Initial state for paragraph animation
                                         whileInView={{ opacity: 1, y: 0 }} // Final state for paragraph animation
                                         transition={{ duration: 0.5, delay: 0.5 }} // Fixed delay for paragraph
@@ -31,12 +31,12 @@ const Whoweare = () => {
                                         "{data.text}"
                                     </motion.p>
                                 </motion.div>
-                                
+
                                 <div className='flex flex-col md:flex-row gap-5 px-5 mt-8'>
                                     <div className='z-10 w-full md:w-1/2'>
                                         <motion.img
                                             className='w-full h-auto md:h-[550px] object-cover'
-                                            src="https://knglobalinfotech.in/assets/about-rLTSLX3P.jpg"
+                                            src=""
                                             alt=""
                                             initial={{ scale: 0 }}      // Initial state for image animation
                                             whileInView={{ scale: 1 }}  // Final state for image animation

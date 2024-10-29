@@ -9,6 +9,8 @@ import Web_img from './img/Web_img.svg'
 import IntroLogo from './Intro/Logointro.mp4'
 import Gas1 from './img/Gas1.svg'
 import Gas2 from './img/gas2.svg'
+import Gas6 from './img/gas6.svg'
+import Gas7 from './img/gas7.svg'
 import FooterVid from './img/footervid.mp4'
 import MD from './img/MD.svg'
 import Scope from './Lottifile/Scope.json'
@@ -32,6 +34,8 @@ export{
     FooterVid,
     Gas1,
     Gas2,
+    Gas6,
+    Gas7,
     IntroLogo,
     Web_img,
     Trans,

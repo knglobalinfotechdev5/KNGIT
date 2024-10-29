@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { LampContainer } from "../../Components/ui/lamp";
 import { StickyScroll } from "../../Components/ui/sticky-scroll-reveal";
 import { GasContent } from '../../Constant'; // Importing the separated data
+import KNWebMobile from './KNWebMobile';
 
 const KNWeb = () => {
   return (
@@ -25,8 +26,15 @@ const KNWeb = () => {
      
         </div>
       </section>
-      <div className='m-0 w-screen sm:block hidden'>
-      <StickyScroll content={GasContent} />
+      {/* Desktop View */}
+      <div className="m-0 w-screen sm:block hidden">
+        <StickyScroll content={GasContent} />
+      </div>
+
+      {/* Mobile View */}
+     
+     <div className="m-0 w-screen sm:hidden block">
+     <KNWebMobile/>
       </div>
     </LampContainer></>
   );

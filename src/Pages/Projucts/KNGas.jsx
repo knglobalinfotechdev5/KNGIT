@@ -1,13 +1,29 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import { LampContainer } from "../../Components/ui/lamp";
 import { StickyScroll } from "../../Components/ui/sticky-scroll-reveal";
 import { GasContent } from '../../Constant'; // Importing the separated data
+import KNGasMobile from './KNGasMobile';
 
 const KNGas = () => {
+  const [isInView, setIsInView] = useState(false);
+
+  // Intersection Observer for scrolling animation
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { threshold: 0.3 }
+    );
+
+    const element = document.querySelector('#mobile-frame');
+    if (element) observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <><LampContainer>
+    <LampContainer>
+      {/* Main Section */}
       <section>
         <div className="flex flex-col items-center justify-center sm:pt-[15%] pt-[55%] w-full h-full p-6 sm:px-8 md:px-10 lg:px-12">
           <motion.h1
@@ -22,15 +38,21 @@ const KNGas = () => {
           >
             KN Gas Application
           </motion.h1>
-     
         </div>
       </section>
-      <div className='m-0 w-screen sm:block hidden'>
-      <StickyScroll content={GasContent} />
+
+      {/* Desktop View */}
+      <div className="m-0 w-screen sm:block hidden">
+        <StickyScroll content={GasContent} />
       </div>
-    </LampContainer></>
+
+      {/* Mobile View */}
+     
+     <div className="m-0 w-screen sm:hidden block">
+     <KNGasMobile/>
+      </div>
+    </LampContainer>
   );
 };
 
 export default KNGas;
-

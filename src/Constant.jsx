@@ -64,7 +64,7 @@
 //         ]
 //     },
 
-import { Confidentiality, Gas1, Gas2, Intellectual, MD, Scope } from "./Assets/data";
+import { Confidentiality, Gas1, Gas2, Gas6, Gas7, Intellectual, MD, Scope } from "./Assets/data";
 
 // ]
 
@@ -403,59 +403,59 @@ export const StoreManagement = [
 ];
 
 // 1. KN Gas Distribution System
-export const knGasApplication = [
+// export const knGasApplication = [
 
-    {
-        id: 1,
-        link: "/kngd",
-        name: "KN Gas Application",
-        detail: [
-            {
-                id: 1,
-                content:
-                    "KN Gas Distribution System offers seamless solutions for managing the entire gas supply chain, from storage to distribution, ensuring efficiency, safety, and real-time monitoring. Our system is designed to automate the complex logistics of gas distribution, minimizing downtime and maximizing operational efficiency.",
-                feature: [
-                    {
-                        id: 1,
-                        img: '', // Replace with actual image
-                        name: "Automated Dispatch",
-                        text: "Automatically allocate and dispatch gas to various distribution points based on demand.",
-                    },
-                    {
-                        id: 2,
-                        img: '', // Replace with actual image
-                        name: "Sales Tracking",
-                        text: "Monitor sales trends and generate reports to optimize supply based on market demand.",
-                    },
-                    {
-                        id: 3,
-                        img: '', // Replace with actual image
-                        name: "Mobile Tracking",
-                        text: "Real-time monitoring of gas trucks with GPS integration for better route management.",
-                    },
-                    {
-                        id: 4,
-                        img: '', // Replace with actual image
-                        name: "Safety Compliance",
-                        text: "Ensure compliance with safety regulations by monitoring pressure, leaks, and gas levels.",
-                    },
-                    {
-                        id: 5,
-                        img: '', // Replace with actual image
-                        name: "Real-time Analytics",
-                        text: "Get real-time data analytics on gas levels, sales, and distribution efficiencies.",
-                    },
-                    {
-                        id: 6,
-                        img: '', // Replace with actual image
-                        name: "Order Management",
-                        text: "Track orders from gas stations and distributors for timely deliveries and restocking.",
-                    },
-                ],
-            },
-        ],
-    },
-]
+//     {
+//         id: 1,
+//         link: "/kngd",
+//         name: "KN Gas Application",
+//         detail: [
+//             {
+//                 id: 1,
+//                 content:
+//                     "KN Gas Distribution System offers seamless solutions for managing the entire gas supply chain, from storage to distribution, ensuring efficiency, safety, and real-time monitoring. Our system is designed to automate the complex logistics of gas distribution, minimizing downtime and maximizing operational efficiency.",
+//                 feature: [
+//                     {
+//                         id: 1,
+//                         img: '', // Replace with actual image
+//                         name: "Automated Dispatch",
+//                         text: "Automatically allocate and dispatch gas to various distribution points based on demand.",
+//                     },
+//                     {
+//                         id: 2,
+//                         img: '', // Replace with actual image
+//                         name: "Sales Tracking",
+//                         text: "Monitor sales trends and generate reports to optimize supply based on market demand.",
+//                     },
+//                     {
+//                         id: 3,
+//                         img: '', // Replace with actual image
+//                         name: "Mobile Tracking",
+//                         text: "Real-time monitoring of gas trucks with GPS integration for better route management.",
+//                     },
+//                     {
+//                         id: 4,
+//                         img: '', // Replace with actual image
+//                         name: "Safety Compliance",
+//                         text: "Ensure compliance with safety regulations by monitoring pressure, leaks, and gas levels.",
+//                     },
+//                     {
+//                         id: 5,
+//                         img: '', // Replace with actual image
+//                         name: "Real-time Analytics",
+//                         text: "Get real-time data analytics on gas levels, sales, and distribution efficiencies.",
+//                     },
+//                     {
+//                         id: 6,
+//                         img: '', // Replace with actual image
+//                         name: "Order Management",
+//                         text: "Track orders from gas stations and distributors for timely deliveries and restocking.",
+//                     },
+//                 ],
+//             },
+//         ],
+//     },
+// ]
 
 
 // export const GasContent = [
@@ -614,10 +614,10 @@ export const GasContent = [
         description: (
             <ul className="list-disc list-inside space-y-2">
                 <li>
-                    <span className="font-extrabold text-[20px] ">Efficient Supplier Management:</span> Streamlines recording and management of incoming inventory and supplier data.
+                    <span className="font-extrabold text-[14px] ">Efficient Supplier Management:</span> Streamlines recording and management of incoming inventory and supplier data.
                 </li>
                 <li>
-                    <span className="font-extrabold text-[20px] ">Data-Driven Insights:</span> The Purchase Analysis feature helps identify purchasing trends and evaluates supplier performance to optimize procurement.
+                    <span className="font-extrabold text-[14px] ">Data-Driven Insights:</span> The Purchase Analysis feature helps identify purchasing trends and evaluates supplier performance to optimize procurement.
                 </li>
             </ul>
         ),
@@ -625,8 +625,8 @@ export const GasContent = [
             <div className="h-full w-full flex items-center justify-center text-white">
                 <img
                     src={Gas1}
-                    width={300}
-                    height={300}
+                    // width={300}
+                    // height={300}
                     className="h-full w-full object-cover"
                     alt="linear board demo"
                 />
@@ -638,9 +638,9 @@ export const GasContent = [
         description: (
             <ul className="list-disc list-inside space-y-2">
                 <li>
-                    <span className="font-extrabold text-[20px] ">Versatile Transaction Processing:</span> Supports various sales types, including Cash Sales and UPI Sales.
+                    <span className="font-extrabold text-[14px] ">Versatile Transaction Processing:</span> Supports various sales types, including Cash Sales and UPI Sales.
                 </li>
-                <li><span className="font-extrabold text-[20px] ">Comprehensive Sales Analysis:</span> Provides detailed reports on sales trends, aiding businesses in performance assessment and decision-making.
+                <li><span className="font-extrabold text-[14px] ">Comprehensive Sales Analysis:</span> Provides detailed reports on sales trends, aiding businesses in performance assessment and decision-making.
                 </li>
             </ul>
         ),
@@ -661,120 +661,174 @@ export const GasContent = [
         description: (
             <ul className="list-disc list-inside space-y-2">
                 <li>
-                    <span className="font-extrabold text-[20px] ">Holistic Stock Overview:</span> Offers a comprehensive view of stock levels through the Stock Summary Report.
+                    <span className="font-extrabold text-[14px] ">Holistic Stock Overview:</span> Offers a comprehensive view of stock levels through the Stock Summary Report.
                 </li>
-                <li><span className="font-extrabold text-[20px] ">Location-Specific Insights:</span> Analyzes stock distribution with Location Wise Stock Reports.
+                <li><span className="font-extrabold text-[14px] ">Location-Specific Insights:</span> Analyzes stock distribution with Location Wise Stock Reports.
                 </li>
-                <li><span className="font-extrabold text-[20px] ">Customer-Centric Stock Tracking:</span> Monitors product availability per customer, ensuring efficient inventory management.
+                <li><span className="font-extrabold text-[14px] ">Customer-Centric Stock Tracking:</span> Monitors product availability per customer, ensuring efficient inventory management.
                 </li>
-                <li><span className="font-extrabold text-[20px] ">Efficient Cylinder Collection:</span> Manages the collection of empty cylinders and tracks stock movements effectively.
+                <li><span className="font-extrabold text-[14px] ">Efficient Cylinder Collection:</span> Manages the collection of empty cylinders and tracks stock movements effectively.
                 </li>
             </ul>
         ),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-                Version control
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas2}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Reporting Module",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Performance Monitoring:</span> Access to key documents like the Daily Sales Report and Sales Inactive Report, enabling informed decision-making based on data analysis.
+            (<li><span className="font-extrabold text-[14px] ">Performance Monitoring:</span> Access to key documents like the Daily Sales Report and Sales Inactive Report, enabling informed decision-making based on data analysis.
             </li>),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-                Running out of content
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas2}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Task Management",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Organized Workflow:</span> Tracks and organizes tasks across operational areas, enhancing team alignment and productivity.
+            (<li><span className="font-extrabold text-[14px] ">Organized Workflow:</span> Tracks and organizes tasks across operational areas, enhancing team alignment and productivity.
             </li>),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-                Running out of content
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas2}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Collection and Delivery",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Logistics Optimization:</span> Manages payment collection and product delivery processes, ensuring operational efficiency and customer satisfaction.
+            (<li><span className="font-extrabold text-[14px] ">Logistics Optimization:</span> Manages payment collection and product delivery processes, ensuring operational efficiency and customer satisfaction.
             </li>),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-                Running out of content
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas6}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Location Management",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Cylinder Distribution Insights:</span> Provides detailed data on cylinder storage across multiple locations, enabling better logistics planning and inventory management.
+            (<li><span className="font-extrabold text-[14px] ">Cylinder Distribution Insights:</span> Provides detailed data on cylinder storage across multiple locations, enabling better logistics planning and inventory management.
 
             </li>),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-                Running out of content
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas7}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Stock Summary Report",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Quick Inventory Assessment:</span> Offers a snapshot of stock levels, including filled and empty cylinders, for quick status checks.
+            (<li><span className="font-extrabold text-[14px] ">Quick Inventory Assessment:</span> Offers a snapshot of stock levels, including filled and empty cylinders, for quick status checks.
 
 
             </li>),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-                Running out of content
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas6}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Location Wise Stock Report",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Detailed Inventory Audits:</span> Generates reports for specific storage locations, simplifying inventory audits and stock replenishment.
+            (<li><span className="font-extrabold text-[14px] ">Detailed Inventory Audits:</span> Generates reports for specific storage locations, simplifying inventory audits and stock replenishment.
 
 
 
             </li>),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-                Running out of content
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas7}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Customer Wise Stock",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Commitment Management:</span> Tracks the allocation of filled and empty cylinders to customers, ensuring timely deliveries and managing commitments effectively.
+            (<li><span className="font-extrabold text-[14px] ">Commitment Management:</span> Tracks the allocation of filled and empty cylinders to customers, ensuring timely deliveries and managing commitments effectively.
             </li>),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-                Running out of content
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas6}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Empty Cylinder Collection",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Return Management:</span> Logs returns, tracks collection schedules, and maintains records of collected cylinders for streamlined operations.
+            (<li><span className="font-extrabold text-[14px] ">Return Management:</span> Logs returns, tracks collection schedules, and maintains records of collected cylinders for streamlined operations.
             </li>),
         content: (
-            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-                Running out of content
+            <div className="h-full w-full flex items-center justify-center text-white">
+                <img
+                    src={Gas6}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
             </div>
         ),
     },
     {
         title: "Stock Movement Report",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Trend Analysis:</span> Monitors cylinder movement between locations and transactions, providing insights to optimize inventory levels over time.
+            (<li><span className="font-extrabold text-[14px] ">Trend Analysis:</span> Monitors cylinder movement between locations and transactions, providing insights to optimize inventory levels over time.
             </li>),
         content: (
             <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
@@ -785,7 +839,7 @@ export const GasContent = [
     {
         title: "Stock Adjustment",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Accurate Record Maintenance:</span> Handles discrepancies in cylinder counts due to various reasons, ensuring inventory integrity.
+            (<li><span className="font-extrabold text-[14px] ">Accurate Record Maintenance:</span> Handles discrepancies in cylinder counts due to various reasons, ensuring inventory integrity.
             </li>),
         content: (
             <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
@@ -796,7 +850,7 @@ export const GasContent = [
     {
         title: "Cylinder Details Report",
         description:
-            (<li><span className="font-extrabold text-[20px] ">Comprehensive Data Access:</span> Generates reports detailing cylinder types, quantities, conditions, locations, and transaction history for informed management decisions.
+            (<li><span className="font-extrabold text-[14px] ">Comprehensive Data Access:</span> Generates reports detailing cylinder types, quantities, conditions, locations, and transaction history for informed management decisions.
             </li>),
         content: (
             <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
